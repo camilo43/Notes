@@ -1,7 +1,7 @@
 //import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { NotePost } from "./components_notesPost/NotePost";
-import noteService from "./modules_notesPost/noteService";
+const { useEffect, useState } = require ("react");
+const { NotePost } = require ("./components_notesPost/NotePost");
+const noteService = require( "./modules_notesPost/noteService");
 
 export const FormsAxiosPostModule = () => {
     

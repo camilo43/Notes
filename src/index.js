@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { FormsAxiosPostModule } from './FormsAxiosPost_Module.jsx';
+const React = require ('react')
+const ReactDOM = require ('react-dom/client');
+const { FormsAxiosPostModule } = require ('./FormsAxiosPost_Module.jsx');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

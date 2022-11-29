@@ -1,6 +1,6 @@
-import axios from "axios";
+const axios = require ("axios");
 
-const url = 'http://localhost:3004/persons/'
+const url = 'http://localhost:3001/notes'
 
 const getting = () => {
     const axiosBase = axios.get(url)

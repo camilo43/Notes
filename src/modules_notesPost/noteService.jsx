@@ -1,26 +1,35 @@
-import axios from "axios";
-const baseUrl = '/'
 
-const getAll = () => {
+const axios = require ("axios");
+const baseUrl = 'http://localhost:3001/'
+
+
+const getAll = () => {    
     const request = axios.get(`${baseUrl}notes`)
     return request.then(response => response.data)
   }
   
-  const create = newObject => {
+  const create = (newObject) => {
     const request = axios.post(`${baseUrl}notes`, newObject)
     return request.then(response => response.data)
   }
   
   const update = (id, newObject) => {
-    const request = axios.put(`${baseUrl}notes/${id}`, newObject)
-    return request.then(response =>{console.log("RESPONSE", response); return response.data})
+    const request = axios.put(`${baseUrl}notes/:${id}`, newObject)
+    return request.then(response =>{return response.data})
+  }
+
+  const deleting = (id) => {
+    const request = axios.delete(`${baseUrl}notes/:${id}`)
+    return request.then(response =>{ return response.data})
   }
   
   const noteService = { 
-    getAll: getAll, 
-    create: create, 
-    update: update 
+    getAll, 
+    create, 
+    update 
   }
 
-  export default noteService
+  module.exports = noteService
+
+ 
  

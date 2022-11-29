@@ -1,6 +1,6 @@
 
 const axios = require ("axios");
-const baseUrl = 'http://localhost:3001/'
+const baseUrl = '/'
 
 
 const getAll = () => {    
@@ -18,10 +18,10 @@ const getAll = () => {
     return request.then(response =>{return response.data})
   }
 
-  const deleting = (id) => {
-    const request = axios.delete(`${baseUrl}notes/:${id}`)
-    return request.then(response =>{ return response.data})
-  }
+  // const deleting = (id) => {
+  //   const request = axios.delete(`${baseUrl}notes/:${id}`)
+  //   return request.then(response =>{ return response.data})
+  // }
   
   const noteService = { 
     getAll, 
